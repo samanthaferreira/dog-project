@@ -38,6 +38,11 @@ app.use(session({
 app.set('views', path.join(__dirname, 'views'))
 app.set('view engine', 'hbs')
 
+app.use(function (req, res, next) {
+  app.locals.xxxx = req.session.currentUser
+  next()
+})
+
 app.use(logger('dev'))
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
