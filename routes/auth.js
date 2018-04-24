@@ -5,12 +5,13 @@ const router = express.Router();
 const bcrypt = require('bcrypt');
 
 const User = require('../models/user');
+const Dog = require('../models/dog');
 
 const bcryptSalt = 10;
 
 // get users listing
 router.get('/signup', (req, res, next) => {
-  if (req.session.currentUser) {
+  if (req.session.currentUser && req.session.dog) {
     res.redirect('/dog-list');
     return;
   }
@@ -22,7 +23,7 @@ router.get('/signup', (req, res, next) => {
 });
 
 router.post('/signup', (req, res, next) => {
-  if (req.session.currentUser) {
+  if (req.session.currentUser && req.session.dog) {
     res.redirect('/dog-list');
     return;
   }
@@ -49,9 +50,20 @@ router.post('/signup', (req, res, next) => {
         password: hashPass
       });
 
+      const newDog = new Dog({
+        name: req.body.name,
+        age: req.body.age
+        //     likes: req.body.likes
+      });
+
       newUser.save() // once new user is saved, store in the session and send to dog-list
         .then((user) => {
           req.session.currentUser = newUser;
+          res.redirect('/dog-list');
+        });
+      newDog.save()
+        .then((dog) => {
+          req.session.dog = newDog;
           res.redirect('/dog-list');
         })
         .catch(next);
