@@ -11,7 +11,7 @@ const bcryptSalt = 10;
 
 // get users listing
 router.get('/signup', (req, res, next) => {
-  if (req.session.currentUser && req.session.dog) {
+  if (req.session.currentUser) {
     res.redirect('/dog-list');
     return;
   }
@@ -23,7 +23,7 @@ router.get('/signup', (req, res, next) => {
 });
 
 router.post('/signup', (req, res, next) => {
-  if (req.session.currentUser && req.session.dog) {
+  if (req.session.currentUser) {
     res.redirect('/dog-list');
     return;
   }
@@ -64,6 +64,7 @@ router.post('/signup', (req, res, next) => {
 
       const newDog = new Dog({
         name: req.body.name,
+        owner: newUser._id,
         age: req.body.age,
         likes: req.body.likes
       });
@@ -71,11 +72,10 @@ router.post('/signup', (req, res, next) => {
       newUser.save() // once new user is saved, store in the session and send to dog-list
         .then((user) => {
           req.session.currentUser = newUser;
-          res.redirect('/dog-list');
-        });
+        })
+        .catch(next);
       newDog.save()
         .then((dog) => {
-          req.session.dog = newDog;
           res.redirect('/dog-list');
         })
         .catch(next);
