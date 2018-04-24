@@ -69,13 +69,12 @@ router.post('/signup', (req, res, next) => {
         likes: req.body.likes
       });
 
-      newUser.save() // once new user is saved, store in the session and send to dog-list
-        .then((user) => {
-          req.session.currentUser = newUser;
+      newUser.save()
+        .then(() => {
+          newDog.save();
         })
-        .catch(next);
-      newDog.save()
-        .then((dog) => {
+        .then(() => {
+          req.session.currentUser = newUser;
           res.redirect('/dog-list');
         })
         .catch(next);
