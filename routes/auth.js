@@ -31,6 +31,7 @@ router.post('/signup', (req, res, next) => {
   if (!req.body.username || !req.body.password) {
     req.flash('signup', 'username or password missing');
     res.redirect('/auth/signup');
+    return;
   }
 
   User.findOne({username: req.body.username})
@@ -45,6 +46,17 @@ router.post('/signup', (req, res, next) => {
       const salt = bcrypt.genSaltSync(bcryptSalt);
       const hashPass = bcrypt.hashSync(req.body.password, salt);
 
+      if (!req.body.name || !req.body.age) {
+        req.flash('signup', 'enter a name and age for your dog');
+        res.redirect('/auth/signup');
+        return;
+      }
+      if (!req.body.likes) {
+        req.flash('signup', 'Please check off a minimun of one box about your dog');
+        res.redirect('/auth/signup');
+        return;
+      }
+
       const newUser = new User({
         username: req.body.username,
         password: hashPass
@@ -52,8 +64,8 @@ router.post('/signup', (req, res, next) => {
 
       const newDog = new Dog({
         name: req.body.name,
-        age: req.body.age
-        //     likes: req.body.likes
+        age: req.body.age,
+        likes: req.body.likes
       });
 
       newUser.save() // once new user is saved, store in the session and send to dog-list

@@ -1,6 +1,6 @@
 <h1>sign up page</h1>
 
-<div method="POST" action="/auth/signup">
+<form method="POST" action="/auth/signup">
 
   <div class="field" >
     <label>Username</label>
@@ -19,30 +19,35 @@
     <label>Age</label>
     <input type="number" name="age">
   </div>
+
     <h4>Describe your dog. Tick at least one of the following fields</h4>
+
   <div>
     <input type="checkbox" id="beach" name="likes" value="beach">
     <label for="beach">Likes playing at the beach</label>
-     </div>
-     <div>
+  </div>
+
+  <div>
     <input type="checkbox" id="likes-dogs" name="likes" value="likes-dogs">
     <label for="likes-dogs">Likes playing with other dogs</label>
-    </div>
-     <div>
+  </div>
+
+  <div>
     <input type="checkbox" id="shy" name="likes" value="shy">
     <label for="shy">Shy</label>
-    </div>
-     <div>
+  </div>
+
+  <div>
     <input type="checkbox" id="playful" name="likes" value="playful">
     <label for="playful">Playful</label>
-    </div>
-     <div>
+  </div>
+
+  <div>
     <input type="checkbox" id="party" name="likes" value="party">
     <label for="party">Party animal</label>
-    </div>
+  </div>
     
-
-    <div class="field submit">
+  <div class="field submit">
     <button type="submit">Sign up</button>
   </div>
 
