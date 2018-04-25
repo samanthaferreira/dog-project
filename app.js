@@ -10,6 +10,7 @@ const flash = require('connect-flash');
 
 const indexRouter = require('./routes/index');
 const authRouter = require('./routes/auth');
+const dogsRouter = require('./routes/dogs');
 
 const app = express();
 
@@ -38,20 +39,23 @@ app.use(session({
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 
-app.use(function (req, res, next) {
-  app.locals.user = req.session.currentUser;
-  next();
-});
+// middlewares
 
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(function (req, res, next) {
+  app.locals.user = req.session.currentUser;
+  next();
+});
 app.use(flash());
 
+// routes
 app.use('/', indexRouter);
 app.use('/auth', authRouter);
+app.use('/dogs', dogsRouter);
 
 // -- 404 and error handler
 

@@ -12,7 +12,7 @@ const bcryptSalt = 10;
 // get users listing
 router.get('/signup', (req, res, next) => {
   if (req.session.currentUser) {
-    res.redirect('/dog-list');
+    res.redirect('/dogs');
     return;
   }
 
@@ -24,7 +24,7 @@ router.get('/signup', (req, res, next) => {
 
 router.post('/signup', (req, res, next) => {
   if (req.session.currentUser) {
-    res.redirect('/dog-list');
+    res.redirect('/dogs');
     return;
   }
 
@@ -75,7 +75,7 @@ router.post('/signup', (req, res, next) => {
         })
         .then(() => {
           req.session.currentUser = newUser;
-          res.redirect('/dog-list');
+          res.redirect('/dogs');
         })
         .catch(next);
     })
@@ -84,7 +84,7 @@ router.post('/signup', (req, res, next) => {
 
 router.get('/login', (req, res, next) => {
   if (req.session.currentUser) {
-    res.redirect('/dog-list');
+    res.redirect('/dogs');
     return;
   }
 
@@ -110,7 +110,7 @@ router.post('/login', (req, res, next) => {
         return;
       }
       req.session.currentUser = result;
-      res.redirect('/dog-list');
+      res.redirect('/dogs');
     })
     .catch(next);
 });
