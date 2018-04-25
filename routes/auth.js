@@ -7,6 +7,8 @@ const bcrypt = require('bcrypt');
 const User = require('../models/user');
 const Dog = require('../models/dog');
 
+const pictures = require('../config/pictures');
+
 const bcryptSalt = 10;
 
 // get users listing
@@ -62,11 +64,15 @@ router.post('/signup', (req, res, next) => {
         password: hashPass
       });
 
+      const ramdomNumber = Math.floor(Math.random() * pictures.length);
+
       const newDog = new Dog({
         name: req.body.name,
         owner: newUser._id,
         age: req.body.age,
-        likes: req.body.likes
+        likes: req.body.likes,
+        picture: pictures[ramdomNumber]
+
       });
 
       newUser.save()

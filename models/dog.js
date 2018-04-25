@@ -9,9 +9,9 @@ const dogSchema = new Schema({
     type: ObjectId,
     ref: 'User'
   },
-
   age: Number,
-  likes: []
+  likes: [],
+  picture: String
 });
 
 const Dog = mongoose.model('Dog', dogSchema);
