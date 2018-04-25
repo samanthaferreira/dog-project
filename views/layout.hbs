@@ -9,7 +9,7 @@
   <body>
     <header id="site-header">
       <div class="container">
-        <a href="/dog-list">dogs</a>
+        <a href="/dog-list">TinWoof!</a>
         
             {{#if user}}
         Logged in as {{user.username}} 
@@ -19,7 +19,8 @@
         {{/if}}
         
         {{#unless user}}
-        <a href="/auth/login">login</a>
+        <a href="/auth/login">Login</a>
+        <a href="/auth/signup">Sign Up</a>
         {{/unless}}
       </div>
     </header>

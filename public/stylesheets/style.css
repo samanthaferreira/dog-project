@@ -4,8 +4,30 @@ body {
 }
 
 a {
-  color:white;
+  color:#27afdc;
+  text-decoration: none;
+    background: #00ffcc;
+    padding: .5rem 1.1rem;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 1rem;
+    border: none;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
 }
+   a :hover {
+    background: #00ddaa;
+  }
+  
+   a:active{
+    -webkit-box-shadow: 0 0 8px #00ddaa;
+            box-shadow: 0 0 8px #00ddaa;
+    -webkit-transition: .1s;
+    -o-transition: .1s;
+    transition: .1s;
+  }
+
 
 /* ---- reset ---- */
 
@@ -31,17 +53,27 @@ body {
   line-height: 147%;
 }
 
-h1 {}
+h1 {
+  color: #27afdc;
+}
 
-h2 {}
+h2 {
+  color: #27afdc;
+}
 
-h3 {}
+h3 {
+  color: #27afdc;
+}
+h4{
+ color: #27afdc;
+}
 
 p {
   margin: 0;
 }
 
-button {
+
+  button {
   background: #00ffcc;
   padding: .5rem 1.1rem;
   cursor: pointer;
@@ -52,16 +84,21 @@ button {
   -o-transition: .3s;
   transition: .3s;
 }
-button:hover {
+ button:hover {
   background: #00ddaa;
 }
 
-button:active{
+ button:active{
   -webkit-box-shadow: 0 0 8px #00ddaa;
           box-shadow: 0 0 8px #00ddaa;
   -webkit-transition: .1s;
   -o-transition: .1s;
   transition: .1s;
+}
+input {
+  
+  padding:10px;
+  border-radius:30px;
 }
 /* ---- layout ---- */
 
@@ -98,9 +135,6 @@ button:active{
   }
 }
 
-img{
-
-}
 
 
 /* ---- components ---- */  
@@ -116,10 +150,11 @@ form .field {
 
 }
 
+
 form label {
 	display: block;
 	margin-bottom: 10px;
-	font-style: bold;
+  font-style: bold;
 }
 
 form input {
