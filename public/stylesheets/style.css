@@ -1,6 +1,6 @@
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: 14px "Comic Sans MS";
 }
 .woof{
   font-family:'Cookie',cursive;
@@ -51,6 +51,8 @@ html {
 body {
   margin: 0;
   padding: 0;
+  background-image: url("/images/dog-paws.png");
+  background-size: 70%;
 }
 
 
@@ -124,7 +126,8 @@ input {
 
 
 /* ---- components ---- */  
-  button {
+button {
+    position:relative;
   background: #00ffcc;
   padding: .5rem 1.1rem;
   cursor: pointer;
@@ -146,25 +149,75 @@ input {
   -o-transition: .1s;
   transition: .1s;
 }
+.logoutBtn{
+  position:relative;
+  left: 450px;
+  top: 0px;
+  background: #00ffcc;
+  padding: .5rem 1.1rem;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 1rem;
+  border: none;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+  background: #00ddaa;
+  -webkit-box-shadow: 0 0 8px #00ddaa;
+          box-shadow: 0 0 8px #00ddaa;
+  -webkit-transition: .1s;
+  -o-transition: .1s;
+  transition: .1s;
+
+}
+.logout:hover{
+  background: #00ddaa;
+}
+.logout:active{
+  -webkit-box-shadow: 0 0 8px #00ddaa;
+          box-shadow: 0 0 8px #00ddaa;
+  -webkit-transition: .1s;
+  -o-transition: .1s;
+  transition: .1s;
+}
+loggedInAs{
+  position:relative;
+  left: 30px;
+  top: 0px;
+  color:white;  
+}
 
 .card {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  transition: 0.3s;
-  padding: 5px 0px;
+  transition: all 0.3s ease;
+  padding-bottom: 10px;
   max-width: 200px;
   display: inline-block;
-  margin-bottom: 0.5px;
-  margin-right:20px;  
+  margin-bottom: 20px;
+  margin-right: 20px;  
   border-radius: 5px;
-  text-align:center;
+  text-align: center;
 }
 
 .card:hover {
+  transition: all 0.3s ease;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
-img {
+.image {
   border-radius: 5px 5px 0 0;
+  width: 100%;
+  height: 80%;
+}
+
+.link {
+  text-decoration: none;
+  color:#27afdc;
+
+}
+
+#map {
+  height: 80vh;
 }
 
 

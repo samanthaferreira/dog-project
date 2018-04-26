@@ -13,9 +13,9 @@
         <a href="/dog-list" class="woof">Woof!</a>
         
             {{#if user}}
-        Logged in as {{user.username}} 
+       <p class="loggedInAs">Logged in as {{user.username}}</p>
         <form method="POST" action="/auth/logout">
-          <button>Logout</button>
+          <button class="logoutBtn">Logout</button>
         </form>
         {{/if}}
         
@@ -29,9 +29,12 @@
     </header>
 
     <div class="container">
-      {{{body}}}
+    
+      {{{body }}}
+      
     </div>
-
+<script  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAShHBa3zYWUqcop_dNNEdbtSU7FVm2_KE"></script>
+<script src="./javascript/main.js"></script>
            
     <footer id="site-footer">
       <div class="container ">
