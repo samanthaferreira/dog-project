@@ -121,8 +121,8 @@ input {
 .section {
   margin-bottom: 60px;
   padding-top: 20px;
-  display: flex;
-  justify-content: space-between 
+  
+  
 }
 
 .section-dog-profile {
