@@ -2,8 +2,19 @@ body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
-
-a {
+.woof{
+  font-family:'Cookie',cursive;
+  font-size:80pt;
+  text-decoration: none;
+  color:whitesmoke;
+}
+.woof-footer{
+  font-family:'Cookie',cursive;
+  font-size:20pt;
+  text-decoration: none;
+  color:whitesmoke;
+}
+.a-round{
   color:#27afdc;
   text-decoration: none;
     background: #00ffcc;
@@ -15,18 +26,17 @@ a {
     -webkit-transition: .3s;
     -o-transition: .3s;
     transition: .3s;
+    -webkit-box-shadow: 0 0 8px #00ddaa;
+    box-shadow: 0 0 8px #00ddaa;
+-webkit-transition: .1s;
+-o-transition: .1s;
+transition: .1s;
 }
-   a :hover {
+   .a-round :hover {
     background: #00ddaa;
   }
   
-   a:active{
-    -webkit-box-shadow: 0 0 8px #00ddaa;
-            box-shadow: 0 0 8px #00ddaa;
-    -webkit-transition: .1s;
-    -o-transition: .1s;
-    transition: .1s;
-  }
+   
 
 
 /* ---- reset ---- */
@@ -71,30 +81,6 @@ h4{
 p {
   margin: 0;
 }
-
-
-  button {
-  background: #00ffcc;
-  padding: .5rem 1.1rem;
-  cursor: pointer;
-  font-size: 1rem;
-  border-radius: 1rem;
-  border: none;
-  -webkit-transition: .3s;
-  -o-transition: .3s;
-  transition: .3s;
-}
- button:hover {
-  background: #00ddaa;
-}
-
- button:active{
-  -webkit-box-shadow: 0 0 8px #00ddaa;
-          box-shadow: 0 0 8px #00ddaa;
-  -webkit-transition: .1s;
-  -o-transition: .1s;
-  transition: .1s;
-}
 input {
   
   padding:10px;
@@ -138,6 +124,49 @@ input {
 
 
 /* ---- components ---- */  
+  button {
+  background: #00ffcc;
+  padding: .5rem 1.1rem;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 1rem;
+  border: none;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+}
+ button:hover {
+  background: #00ddaa;
+}
+
+ button:active{
+  -webkit-box-shadow: 0 0 8px #00ddaa;
+          box-shadow: 0 0 8px #00ddaa;
+  -webkit-transition: .1s;
+  -o-transition: .1s;
+  transition: .1s;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  padding: 5px 0px;
+  max-width: 200px;
+  display: inline-block;
+  margin-bottom: 0.5px;
+  margin-right:20px;  
+  border-radius: 5px;
+  text-align:center;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+img {
+  border-radius: 5px 5px 0 0;
+}
+
 
 /* -- forms -- */
 

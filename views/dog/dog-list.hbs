@@ -1,8 +1,14 @@
 <div class="section">
-  <h1> Meet Other Dogs</h1>
-  {{#each dogs}}
-  {{this.name}}
- <img  src="{{this.picture}}">
-
+   <h1> Meet Other Dogs</h1>
+ 
+  {{#each dogs}}  
+   <div class="card">
+  <img  src="{{this.picture}}" class="card">
+     <a href="/dogs/{{this._id}}">{{this.name}}</a>
+   
+  </div>
   {{/each}}
+
+
+    
 </div>

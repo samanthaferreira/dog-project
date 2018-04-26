@@ -5,11 +5,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link href='https://fonts.googleapis.com/css?family=Cookie' rel='stylesheet' type='text/css'>
   </head>
   <body>
     <header id="site-header">
       <div class="container">
-        <a href="/dog-list">TinWoof!</a>
+        <a href="/dog-list" class="woof">Woof!</a>
         
             {{#if user}}
         Logged in as {{user.username}} 
@@ -19,8 +20,8 @@
         {{/if}}
         
         {{#unless user}}
-        <a href="/auth/login">Login</a>
-        <a href="/auth/signup">Sign Up</a>
+        <a href="/auth/login"class="a-round">Login</a>
+        <a href="/auth/signup"class="a-round">Sign Up</a>
         {{/unless}}
       
     
@@ -33,8 +34,8 @@
 
            
     <footer id="site-footer">
-      <div class="container">
-     &copy 2018 TinWoof
+      <div class="container ">
+     <p>&copy 2018</p><p class="woof-footer">Woof</p>
       </div>
     </footer>
   </body>
