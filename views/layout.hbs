@@ -11,7 +11,7 @@
     <header id="site-header">
       <div class="container">
         <a href="/dog-list" class="woof">Woof!</a>
-        
+        <img class="woof-paw"src="/images/single-paw.png">
             {{#if user}}
        <p class="loggedInAs">Logged in as {{user.username}}</p>
         <form method="POST" action="/auth/logout">
@@ -29,16 +29,15 @@
     </header>
 
     <div class="container">
-    
       {{{body }}}
-      
     </div>
+
 <script  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAShHBa3zYWUqcop_dNNEdbtSU7FVm2_KE"></script>
 <script src="./javascript/main.js"></script>
            
     <footer id="site-footer">
       <div class="container ">
-     <p>&copy 2018</p><p class="woof-footer">Woof</p>
+     <p>&copy 2018</p><p class="woof-footer woof-paw">Woof</p>
       </div>
     </footer>
   </body>
