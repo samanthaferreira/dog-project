@@ -1,24 +1,18 @@
 body {
   padding: 50px;
   font-family: 14px "Comic Sans MS";
-  background-color:#EEFEEE;
 }
 .woof{
   font-family:'Cookie',cursive;
   font-size:80pt;
   text-decoration: none;
   color:whitesmoke;
-  height: 50px;
 }
 .woof-footer{
   font-family:'Cookie',cursive;
   font-size:20pt;
   text-decoration: none;
   color:whitesmoke;
-}
-.woof-paw{
-  width:30px;
-  
 }
 .a-round{
   color:#27afdc;
@@ -57,9 +51,8 @@ html {
 body {
   margin: 0;
   padding: 0;
-  background-image: url("/images/bg-paw-print.png");
+  background-image: url("/images/dog-paws.png");
   background-size: 70%;
-  
 }
 
 
@@ -121,22 +114,20 @@ input {
 .section {
   margin-bottom: 60px;
   padding-top: 20px;
-  display: flex;
-  justify-content: space-between 
 }
 
 .section-dog-profile {
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  background-color: #EEFEEE;
-  color: green;
+  box-shadow: 0 40px 20px 0 rgba(0,0,0,0.2);
   transition: all 0.3s ease;
+  padding-bottom: 10px;
   max-width: 400px;
   display: inline-block;
-  margin-right: 10px;
+  margin-bottom: 60px;
+  margin-right: 20px;  
   border-radius: 5px;
-  text-align: left;
+  text-align: justify;
+  float: right;
 }
-
 
 @media (min-width: 768px) {
   .container {
@@ -239,7 +230,7 @@ loggedInAs{
 }
 
 #map {
-  height: 50vh;
+  height: 80vh;
 }
 
 
@@ -290,30 +281,6 @@ form .field.has-error input {
 	border: 1px solid  red;
 }
 
-.loginBox{
-  align-items: center;
- 
-  display: flex;
-  font-family: 'Inter UI', sans-serif;
-  height: 100vh;
-  justify-content: left;
-  margin: 0;
-  width: 100vw;
-}
-
-.loginCard{
-  background: white; 
-  border-radius: 12px;
-  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-  overflow: hidden;
-  padding: 20px;
-  position: center;
-  width: 300px;
-}
-
-
-
-/*SIGN UP CHECK BOXES*/
 /* Base for label styling */
 [type="checkbox"]:not(:checked),
 [type="checkbox"]:checked {
@@ -383,4 +350,5 @@ form .field.has-error input {
 label:hover:before {
   border: 2px solid #4778d9!important;
 }
+
 

@@ -1,9 +1,17 @@
+{{#if user}}
 <div class="section">
-  <p>profile</p>
-  {{#if user}}
-  <img  src="{{dogs.picture}}">
- <h2>{{dogs.name}}</h2>
- {{dogs.age}}
- {{dogs.likes}}
-{{/if}}
+  <div>
+    <h1>Hey! I am {{dogs.name}}</h1>
+    <img class="card" src=" {{dogs.picture}}">
+  </div>
+  <div class="section-dog-profile">
+    <h2>I am {{dogs.age}} years old</h2>
+    <h2>About me:</h2>
+    <ul>
+      {{#each dogs.likes}}
+      <li>{{this}}</li>
+      {{/each}}
+    </ul>
+  </div>
 </div>
+{{/if}}
