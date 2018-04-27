@@ -1,28 +1,28 @@
 
-<form method="POST" class="loginBox" action="/auth/login">
-<div class = "loginCard">
-<h1>Log in </h1>
+<form method="POST" class="form-box" action="/auth/login">
+  <div class = "form-card">
+    <h1>Log in </h1>
 
-  <div class="field container" >
-    <label>Username</label>
-    <input type="text" name="username"/>
-  </div>
+    <div class="field container" >
+      <label>Username</label>
+      <input type="text" name="username"/>
+    </div>
 
-  <div class="field" >
-    <label>Password</label>
-    <input type="password" name="password"/>
-  </div>
+    <div class="field" >
+      <label>Password</label>
+      <input type="password" name="password"/>
+    </div>
 
-  <div class="field submit">
-    <button type="submit">Log In</button>
-  </div>
+    <div class="field submit">
+      <button type="submit">Log In</button>
+    </div>
 
-  {{#if messages.length}}
-  <div class="validation">
-    {{#each messages}}
-    <p>{{this}}</p>  
-    {{/each}}
+    {{#if messages.length}}
+    <div class="validation">
+      {{#each messages}}
+      <p>{{this}}</p>  
+      {{/each}}
+    </div>
+    {{/if}}
   </div>
-  {{/if}}
-</div>
 </form>

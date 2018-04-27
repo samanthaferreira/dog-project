@@ -1,62 +1,63 @@
-<h1>Sign Up </h1>
 
-<form method="POST" action="/auth/signup">
+<form method="POST" class="form-box" action="/auth/signup">
+  <div class = "form-card">
+  <h1>Sign Up </h1>
+    <div class="field input-wrapper" >
+      <label>Username</label>
+      <input type="text" name="username"/>
+    </div>
 
-  <div class="field input-wrapper" >
-    <label>Username</label>
-    <input type="text" name="username"/>
+    <div class="field input-wrapper" >
+      <label class="">Password</label>
+      <input type="password" name="password"/>
+    </div>
+
+    <h3>Create your dog's profile</h3>
+    <div>
+      <label>Dog's name</label>
+      <input type="text" name="name">
+      <label>Age</label>
+      <input type="number" name="age">
+    </div>
+
+      <h4>Describe your dog. Tick at least one of the following fields</h4>
+
+    <div>
+      <input type="checkbox" id="beach" name="likes" value="enjoy playing with water">
+      <label for="beach">Likes playing at the beach</label>
+    </div>
+
+    <div>
+      <input type="checkbox" id="likes-dogs" name="likes" value="enjoy playing with other dogs">
+      <label for="likes-dogs">Likes playing with other dogs</label>
+    </div>
+
+    <div>
+      <input type="checkbox" id="shy" name="likes" value="shy">
+      <label for="shy">Shy</label>
+    </div>
+
+    <div>
+      <input type="checkbox" id="playful" name="likes" value="playful">
+      <label for="playful">Playful</label>
+    </div>
+
+    <div>
+      <input type="checkbox" id="party" name="likes" value="I am a party dog ">
+      <label for="party">Party animal</label>
+    </div>
+      
+    <div class="field submit">
+      <button type="submit">Sign up</button>
+    </div>
+
+    {{#if messages.length}}
+    <div class="validation">
+      {{#each messages}}
+      <p>{{this}}</p>  
+      {{/each}}
+    </div>
+    {{/if}}
+
   </div>
-
-  <div class="field input-wrapper" >
-    <label class="">Password</label>
-    <input type="password" name="password"/>
-  </div>
-
-  <h3>Create your dog's profile</h3>
-  <div>
-    <label>Dog's name</label>
-    <input type="text" name="name">
-    <label>Age</label>
-    <input type="number" name="age">
-  </div>
-
-    <h4>Describe your dog. Tick at least one of the following fields</h4>
-
-  <div>
-    <input type="checkbox" id="beach" name="likes" value="enjoy playing with water">
-    <label for="beach">Likes playing at the beach</label>
-  </div>
-
-  <div>
-    <input type="checkbox" id="likes-dogs" name="likes" value="enjoy playing with other dogs">
-    <label for="likes-dogs">Likes playing with other dogs</label>
-  </div>
-
-  <div>
-    <input type="checkbox" id="shy" name="likes" value="shy">
-    <label for="shy">Shy</label>
-  </div>
-
-  <div>
-    <input type="checkbox" id="playful" name="likes" value="playful">
-    <label for="playful">Playful</label>
-  </div>
-
-  <div>
-    <input type="checkbox" id="party" name="likes" value="I am a party dog ">
-    <label for="party">Party animal</label>
-  </div>
-    
-  <div class="field submit">
-    <button type="submit">Sign up</button>
-  </div>
-
-  {{#if messages.length}}
-  <div class="validation">
-    {{#each messages}}
-    <p>{{this}}</p>  
-    {{/each}}
-  </div>
-  {{/if}}
-
 </form>
