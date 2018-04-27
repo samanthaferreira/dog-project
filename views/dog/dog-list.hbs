@@ -2,11 +2,13 @@
 <h1 class="meetHeading"> Meet Other Dogs</h1>
 {{#each dogs}}  
 <div class="card">
-  <img  src="{{this.picture}}" class="image">
+  <img  class="img-card" src="{{this.picture}}" class="image" >
   <a href="/dogs/{{this._id}}" class="link">{{this.name}}</a>
 </div>
 {{/each}}
 <h2 class="meetHeading">Dog Friendly Places Near You</h2>
-<div id="map">
-  <p> Dog Friendly Parks Near You</p><
+<div class="box-map">
+<div id="map" class="map-border">
+  </div>
+
 </div>
