@@ -10,7 +10,7 @@
   <body>
     <header id="site-header">
       <div class="container">
-        <a href="/dog-list" class="woof">Woof!</a>
+        <a href="/dogs" class="woof">Woof!</a>
         <img class="woof-paw"src="/images/single-paw.png">
             {{#if user}}
        <p class="loggedInAs">Logged in as {{user.username}}</p>
@@ -28,7 +28,7 @@
       </div>
     </header>
 
-    <div class="container">
+    <div id="site-main" class="container">
       {{{body }}}
     </div>
 

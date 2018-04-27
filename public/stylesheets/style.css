@@ -108,11 +108,18 @@ input {
   /* display: block; */
   /* width: 80vw; */
  }
+ .introductionDog{
+   text-align: center;
+ }
 
 #site-header {
   padding: 30px 0;
   color: white;
   background: #20B2AA ;
+}
+
+#site-main {
+  min-height: 70vh;
 }
 
 #site-footer {
@@ -127,7 +134,7 @@ input {
 
 .container {
   margin: 0 20px; 
-}
+}\
 
 .container h1{
   background-color: #EEFEEE; 
@@ -141,22 +148,23 @@ input {
 .detail-cards {
   display: flex;
   justify-content: space-around;
+  padding-left: 10px;
+    margin-right: 150px;
 } 
 
 .section-dog-profile {
   
   display: flex;
   justify-content: center;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  
   background-color: #EEFEEE;
   color: green;
-  transition: all 0.3s ease;
   max-width: 400px;
   display: inline-block;
-  margin-right: 10px;
-  border-radius: 5px;
-  text-align: left;
-}
+  margin: 5px;
+  margin-top: -25px;  
+  padding: 5%;
+  border-radius: 5px;}
 
 
 @media (min-width: 768px) {
@@ -240,6 +248,7 @@ loggedInAs{
   margin-right: 20px;  
   border-radius: 5px;
   text-align: center;
+  background-color: white;
 }
 
 .card:hover {
