@@ -1,14 +1,14 @@
 {{#if user}}
-<h1 class="introductionDog">Hey! I am {{dogs.name}}</h1>
+<h1 class="introductionDog">Hey! I am {{dog.name}}</h1>
 <div class="section detail-cards">
   <div>
-    <img class="card" src=" {{dogs.picture}}">
+    <img class="card" src=" {{dog.picture}}">
   </div>
   <div class="section-dog-profile">
-    <h2>I am {{dogs.age}} years old</h2>
+    <h2>I am {{dog.age}} years old</h2>
     <h2>About me:</h2>
     <ul>
-      {{#each dogs.likes}}
+      {{#each dog.likes}}
       <li>{{this}}</li>
       {{/each}}
     </ul>

@@ -4,6 +4,8 @@ const router = express.Router();
 
 const Dog = require('../models/dog');
 
+const likes = require('../config/likes');
+
 router.get('/', (req, res, next) => {
   Dog.find({})
     .then((result) => {
@@ -22,9 +24,11 @@ router.get('/:dogId', function (req, res, next) {
   }
   Dog.findById(req.params.dogId)
     .then((result) => {
+      result.likes = result.likes.map((item) => likes[item]);
       const data = {
-        dogs: result
+        dog: result
       };
+      console.log(data);
       res.render('dog/dog-more', data);
     })
     .catch(next);
