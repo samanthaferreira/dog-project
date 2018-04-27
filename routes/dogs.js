@@ -28,7 +28,6 @@ router.get('/:dogId', function (req, res, next) {
       const data = {
         dog: result
       };
-      console.log(data);
       res.render('dog/dog-more', data);
     })
     .catch(next);
